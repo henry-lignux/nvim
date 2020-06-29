@@ -21,9 +21,6 @@ nnoremap <leader>H <c-w>H
 "this command allows you to use 'jk' to escape insert mode
 inoremap jk <Esc>
 
-"this command unmaps the escape key in insert mode
-inoremap <esc> <nop>
-
 " these commands allow you to move highlighted text up and down
 vnoremap J :m '>+1<CR>gv=gv
 vnoremap K :m '<-2<CR>gv=gv
