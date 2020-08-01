@@ -1,7 +1,11 @@
 let g:coc_disable_startup_warning = 1
+set relativenumber
 set nu
-set hls
+set nohls
 set ic
+set nowrap
+set cursorline
+hi CursorLine ctermbg=darkgrey
 syntax on
 
 " this command sets space to be the leader key
@@ -28,7 +32,7 @@ vnoremap K :m '<-2<CR>gv=gv
 set ruler                           " show line and column number
 set showcmd             " show (partial) command in status line
 
-nmap <leader>x :CocCommand explorer<CR>
+nmap <leader>x :NERDTree<CR>
 
 source $HOME/.config/nvim/plug-config/coc.vim
 
@@ -37,4 +41,9 @@ call plug#begin('~/.config/nvim/bundle')
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'scrooloose/nerdtree'
 Plug 'tpope/vim-surround'
+Plug 'morhetz/gruvbox'
+Plug 'dracula/vim'
+Plug 'arcticicestudio/nord-vim'
 call plug#end()
+
+colorscheme dracula
